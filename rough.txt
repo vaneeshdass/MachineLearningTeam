@@ -1,0 +1,14 @@
+# code for making dictionary of tuple
+from collections import defaultdict
+
+li=[ ['A', 1], ['A', 5], ['B', 3 ] ]
+d1 = defaultdict(list)
+
+for k, v in li:
+    d1[k].append(v)
+
+d = dict((k, tuple(v)) for k, v in d1.items())
+
+print(d)
+print(max(d['A']))
+
